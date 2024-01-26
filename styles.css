@@ -16,12 +16,30 @@ button{
     padding: 25px;
 
 }
-#calculator{
+.sidebox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.calculator,#history{
     font-family: Arial, sans-serif;
     background-color: hsl(0,0%,15%);
     border-radius: 15px;
-    max-width: 400px;
+    width: 50%;
     overflow: hidden;
+}
+.calculator{
+    margin-right: 10px;
+    border-right: 1px solid #ccc;
+}
+#history{
+    
+    position: relative; /* Allow absolute positioning for button */
+    background-color: hsl(0, 0%, 15%);
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 #display{
     width: 95%;
@@ -55,3 +73,36 @@ button:active{
 .operator-btn:active{
     background-color: hsl(35,100%,75%);
 }
+
+#clear-history-container {
+    position: relative;  
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+  }
+  
+  #clear-history {
+    /* padding: 5px 10px; */
+    width: 100px;
+    height: 40px;
+    right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: hsl(0,0%,25%);
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  #clear-history:hover {
+    background-color: hsl(0,0%,30%);
+  }
+  .date-container {
+    padding-top: 5px;
+    text-align: right;
+    font-style: italic;
+    color: #888;
+    margin-bottom: 5px;
+  }
+  
+  
